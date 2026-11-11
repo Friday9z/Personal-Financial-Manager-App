@@ -118,7 +118,7 @@ fun TransactionDetail(vm: MainViewModel, s: UiState, nav: Nav, id: Long) {
                 Text(t.title.ifBlank { "-" }, fontSize = 18.sp)
             }
             CardBox {
-                fun row(k: String, v: String?) { if (!v.isNullOrBlank()) Row(Modifier.fillMaxWidth().padding(vertical = 3.dp), horizontalArrangement = Arrangement.SpaceBetween) {
+                @Composable fun row(k: String, v: String?) { if (!v.isNullOrBlank()) Row(Modifier.fillMaxWidth().padding(vertical = 3.dp), horizontalArrangement = Arrangement.SpaceBetween) {
                     Text(k, color = MaterialTheme.colorScheme.onSurfaceVariant); Text(v) } }
                 val dt = java.time.Instant.ofEpochMilli(t.epochMillis).atZone(java.time.ZoneId.systemDefault())
                 row("Transaction ID", "#${t.id}")
