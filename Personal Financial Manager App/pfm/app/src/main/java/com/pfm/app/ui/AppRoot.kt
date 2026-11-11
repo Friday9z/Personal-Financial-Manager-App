@@ -56,7 +56,7 @@ fun AppRoot(vm: MainViewModel, pins: PinManager, s: UiState, onLockNow: () -> Un
 @Composable
 private fun BottomBar(nav: Nav) {
     NavigationBar(containerColor = MaterialTheme.colorScheme.surface) {
-        fun item(route: String, label: String, icon: ImageVector) = NavigationBarItem(
+        @Composable fun item(route: String, label: String, icon: ImageVector) = NavigationBarItem(
             selected = nav.current == route, onClick = { nav.tab(route) },
             icon = { Icon(icon, label) }, label = { Text(label) }
         )
