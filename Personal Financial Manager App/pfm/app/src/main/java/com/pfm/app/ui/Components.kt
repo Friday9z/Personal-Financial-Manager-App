@@ -165,7 +165,7 @@ fun DateField(label: String, date: LocalDate, settings: Map<String, String>, onC
 }
 
 @Composable
-fun MoneyField(label: String, value: String, onChange: (String) -> Unit, modifier: Modifier = Modifier) {
+fun MoneyField(label: String, value: String, modifier: Modifier = Modifier, onChange: (String) -> Unit) {
     OutlinedTextField(
         value = value,
         onValueChange = { v -> if (v.all { it.isDigit() || it == '.' || it == ',' }) onChange(v) },
