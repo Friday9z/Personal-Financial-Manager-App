@@ -14,7 +14,7 @@ object Receipts {
 }
 
 /**
- * Backup = ไฟล์ .zip ประกอบด้วย pfm.db + receipts/*  (ไม่รวม PIN — PIN อยู่ใน Keystore ของเครื่องนี้)
+ * Backup = ไฟล์ .zip ประกอบด้วย pfm.db + receipts  (ไม่รวม PIN — PIN อยู่ใน Keystore ของเครื่องนี้)
  * Restore = แทนที่ฐานข้อมูลทั้งหมด แล้วรีสตาร์ทแอป
  */
 object Backup {
