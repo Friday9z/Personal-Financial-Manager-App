@@ -100,7 +100,7 @@ fun HomeScreen(vm: MainViewModel, s: UiState, nav: Nav, snack: SnackbarHostState
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun SummaryCell(label: String, v: Long, color: androidx.compose.ui.graphics.Color, pct: Double?, s: UiState, modifier: Modifier, onClick: () -> Unit) {
-    Surface(modifier, onClick = onClick, shape = androidx.compose.foundation.shape.RoundedCornerShape(14.dp), color = MaterialTheme.colorScheme.surfaceVariant) {
+    Surface(onClick = onClick, modifier = modifier, shape = androidx.compose.foundation.shape.RoundedCornerShape(14.dp), color = MaterialTheme.colorScheme.surfaceVariant) {
         Column(Modifier.padding(10.dp)) {
             Text(label, fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
             Text(fmtMoney(s.settings, v).removeSuffix(".00"), color = color, fontWeight = FontWeight.Bold, fontSize = 15.sp, maxLines = 1)
